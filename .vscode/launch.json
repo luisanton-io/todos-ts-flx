@@ -8,7 +8,8 @@
             "type": "node",
             "request": "launch",
             "name": "Build Project",
-            "program": "${workspaceFolder}/src/index.tsx",
+            // "program": "${workspaceFolder}/src/index.tsx",
+            "program": "./build/index.html",
             "preLaunchTask": "npm: build",
             "sourceMaps": true,
             "smartStep": true,
@@ -16,6 +17,15 @@
             "outFiles": [
                 "${workspaceFolder}/build/**/*.js"
             ]
+        },
+        {
+            "type": "chrome",
+            "request": "launch",
+            "name": "Launch Chrome against localhost",
+            "url": "http://localhost:3000",
+            // "url": "file:///C:/Users/username/deleteMe/HelloWeb/helloweb.html",
+            "webRoot": "${workspaceFolder}",
+            "internalConsoleOptions": "openOnSessionStart",
         }
     ]
 }
